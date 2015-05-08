@@ -5,7 +5,7 @@ require 'jsonapi/generators/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'jsonapi-generators'
-  spec.version       = JsonApi::Generators::VERSION
+  spec.version       = Jsonapi::Generators::VERSION
   spec.authors       = ['Edward Loveall']
   spec.email         = ['edward@intrepid.io']
 

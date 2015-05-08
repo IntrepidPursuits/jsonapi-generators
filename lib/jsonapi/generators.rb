@@ -1,6 +1,6 @@
 require 'jsonapi/generators/version'
 
-module JsonApi
+module Jsonapi
   module Generators
   end
 end
