@@ -5,8 +5,17 @@ module Jsonapi
       source_root File.expand_path('../../templates', __FILE__)
 
       def add_gems
-        insert_into_file 'Gemfile', global_gems, before: first_gem
-        insert_into_file 'Gemfile', test_gems, after: "group :test do\n"
+        gem 'active_model_serializers', '0.8.3'
+        gem 'foreman'
+        gem 'puma'
+        gem 'oj'
+        gem 'oj_mimic_json'
+        gem 'versionist'
+
+        gem_group :test do
+          gem 'json-schema'
+          gem 'json_spec'
+        end
       end
 
       def configure_json_spec
@@ -41,26 +50,6 @@ module Jsonapi
       end
 
       private
-
-      def first_gem
-        File.read('Gemfile').match(/gem .+/)[0]
-      end
-
-      def global_gems
-        <<-GEMS
-gem 'active_model_serializers', '0.8.3'
-gem 'foreman'
-gem 'puma'
-gem 'versionist'
-GEMS
-      end
-
-      def test_gems
-        <<-GEMS
-  gem 'json-schema'
-  gem 'json_spec'
-GEMS
-      end
 
       def json_spec_helper
         "config.include JsonSpec::Helpers\n".indent(2)
