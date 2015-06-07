@@ -1,4 +1,4 @@
-require 'jsonapi/generators/version'
+require 'json_api/generators/version'
 
 module JsonApi
   module Generators

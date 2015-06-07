@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in api-generators.gemspec
+# Specify your gem's dependencies in json_api-generators.gemspec
 gemspec

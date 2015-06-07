@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'jsonapi/generators/version'
+require 'json_api/generators/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'jsonapi-generators'
+  spec.name          = 'json_api-generators'
   spec.version       = JsonApi::Generators::VERSION
   spec.authors       = ['Edward Loveall']
   spec.email         = ['edward@intrepid.io']

@@ -1,4 +1,4 @@
-module Jsonapi
+module JsonApi
   module Generators
     class SetupGenerator < Rails::Generators::Base
       desc 'Setup base gems and configuration'
